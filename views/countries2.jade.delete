@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  .container
+    h1= title
+    h2 Countries
+      .container
+         .row
+            .col-md-4 Name
+            .col-md-2 Code 2 letter
+            .col-md-2 Code 3 letter
+            .col-md-2 Num
+            .col-md-2 Action
+         each row, i in countries
+            .row
+              .col-md-4 #{row.Name}
+              .col-md-2 #{row.ISO2LET} 
+              .col-md-2 #{row.ISO2LET}
+              .col-md-2 #{row.ISO2NUM}
+              .col-m2-2 
+                  a(href='/countries/#{row.CountryId}') edit 
+                  a(href='/countries/#{row.CountryId}') delete

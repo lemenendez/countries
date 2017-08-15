@@ -1,0 +1,9 @@
+{
+    "host" : "localhost",
+    "user" : "root",
+    "password": "dev123",
+    "database": "geo",
+    "database_test": "geo_test",
+    "countries_page_size": 10,
+    "countries_page_default": 1
+}

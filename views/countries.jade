@@ -1,0 +1,41 @@
+extends layout
+block head
+    base(href="/")
+block content
+  .container
+    h1= title
+    h2 Countries Admin    
+    app-main
+         span loading...
+block javascript    
+    script(src="core-js/client/shim.min.js")
+    script(src="zone.js/dist/zone.js")
+    script(src="reflect-metadata/Reflect.js")
+    script(src="systemjs/dist/system.src.js")
+    script.
+        System.config({
+            packages: {
+                '': {
+                    defaultExtension: 'js'
+                }
+            },
+            map: {                
+                '@angular/core': '@angular/core/bundles/core.umd.js',
+                '@angular/common': '@angular/common/bundles/common.umd.js',
+                '@angular/compiler': '@angular/compiler/bundles/compiler.umd.js',
+                '@angular/platform-browser': '@angular/platform-browser/bundles/platform-browser.umd.js',
+                '@angular/platform-browser/animations': '@angular/platform-browser/bundles/platform-browser-animations.umd.js',
+                '@angular/platform-browser-dynamic': '@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js',
+                '@angular/http': '@angular/http/bundles/http.umd.js',
+                '@angular/router': '@angular/router/bundles/router.umd.js',
+                '@angular/router/upgrade': '@angular/router/bundles/router-upgrade.umd.js',
+                '@angular/forms': '@angular/forms/bundles/forms.umd.js',
+                '@angular/upgrade': '@angular/upgrade/bundles/upgrade.umd.js',
+                '@angular/upgrade/static': '@angular/upgrade/bundles/upgrade-static.umd.js',                 
+                'rxjs': 'rxjs'
+            },
+            defaultJSExtension: true            
+        });
+
+        SystemJS.import('bootstrap');
+        

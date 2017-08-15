@@ -1,0 +1,39 @@
+{
+  "name": "api",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "@angular/common": "~2.4.0",
+    "@angular/compiler": "~2.4.0",
+    "@angular/core": "~2.4.0",
+    "@angular/forms": "~2.4.0",
+    "@angular/http": "~2.4.0",
+    "@angular/platform-browser": "~2.4.0",
+    "@angular/platform-browser-dynamic": "~2.4.0",    
+    "@angular/router": "~3.4.0",
+    "angular-in-memory-web-api": "~0.2.1",
+    "systemjs": "0.19.40",
+    "core-js": "^2.4.1",
+    "reflect-metadata": "^0.1.8",
+    "rxjs": "5.0.1",
+    "zone.js": "^0.7.4",
+    "async": "^2.5.0",
+    "body-parser": "~1.15.1",
+    "chai": "^4.1.1",
+    "cookie-parser": "~1.4.3",
+    "coreui.io": "^1.0.0-alpha.6",
+    "debug": "~2.2.0",
+    "es6-shim": "^0.35.3",
+    "express": "~4.13.4",
+    "jade": "~1.11.0",
+    "mocha": "^3.5.0",
+    "morgan": "~1.7.0",
+    "mysql": "^2.14.1",
+    "node-mocks-http": "^1.6.4",
+    "serve-favicon": "~2.3.0",
+    "should": "^11.2.1"    
+  }
+}

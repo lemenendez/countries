@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  .container
+    h1= title
+    h2 Login
+    form.form(action="/login", method="post")
+       div.form-group
+          label(for="username") Username
+          input.form-control(type="text", name="username", placeholder="Email address")
+       div.form-group
+          label(for="password") Password
+          input.form-control(type="password", name="password", placeholder="Password")
+       div.form-group
+          label #{error}
+       div.form-group
+          button.btn.btn-large.btn-primary(type="submit") Sign in 
