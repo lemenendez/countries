@@ -35,8 +35,26 @@ CREATE TABLE `Country` (
   `Updated_At` datetime NOT NULL,
   `Deleted_At` datetime DEFAULT NULL,
   PRIMARY KEY (`CountryId`)
-) ENGINE=InnoDB AUTO_INCREMENT=247 DEFAULT CHARSET=utf8 COMMENT='List of Countries';
+) ENGINE=InnoDB AUTO_INCREMENT=251 DEFAULT CHARSET=utf8 COMMENT='List of Countries';
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Country`
+--
+
+LOCK TABLES `Country` WRITE;
+/*!40000 ALTER TABLE `Country` DISABLE KEYS */;
+INSERT INTO `Country` VALUES 
+(1,'Andorra','AA','AAA',333,1,'2017-08-10 18:58:20','2017-08-14 19:19:21',NULL),
+(2,'United Arab Emirates','AE','AEA',3333,1,'2017-08-10 18:58:20','2017-08-14 19:19:32',NULL),
+(3,'Afghanistan','AF','AAA',333,1,'2017-08-10 18:58:20','2017-08-14 20:09:33',NULL),
+(4,'Antigua and Barbuda','AG',NULL,NULL,1,'2017-08-10 18:58:20','2017-08-10 18:58:20',NULL),
+(5,'Anguilla','AI',NULL,NULL,1,'2017-08-10 18:58:20','2017-08-10 18:58:20',NULL),
+(6,'Albania','AL',NULL,NULL,1,'2017-08-10 18:58:20','2017-08-10 18:58:20',NULL),
+(7,'Armenia','AM',NULL,NULL,1,'2017-08-10 18:58:20','2017-08-10 18:58:20',NULL),
+(8,'Guatemala','GT',NULL,NULL,1,'2017-08-10 18:58:20','2017-08-10 18:58:20',NULL);
+/*!40000 ALTER TABLE `Country` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `Location`
@@ -57,8 +75,23 @@ CREATE TABLE `Location` (
   PRIMARY KEY (`LocationId`),
   KEY `CountryId` (`CountryId`),
   CONSTRAINT `Location_ibfk_1` FOREIGN KEY (`CountryId`) REFERENCES `Country` (`CountryId`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='lists of divitions for a country';
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8 COMMENT='lists of divitions for a country';
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Location`
+--
+
+LOCK TABLES `Location` WRITE;
+/*!40000 ALTER TABLE `Location` DISABLE KEYS */;
+INSERT INTO `Location` VALUES 
+(1,8,'Guatemala','GUA',1,'2017-08-14 20:58:07','2017-08-14 20:58:07',NULL),
+(2,8,'Escuintla','ESC',1,'2017-08-14 20:58:07','2017-08-14 20:58:07',NULL),
+(3,8,'Quetzaltenango','QTZ',1,'2017-08-14 20:58:07','2017-08-14 20:58:07',NULL),
+(4,8,'Jalapa','JALAP',1,'2017-08-14 20:58:07','2017-08-14 20:59:54',NULL),
+(5,8,'aaa','AAA',1,'2017-08-14 21:33:32','2017-08-14 21:33:57',NULL);
+/*!40000 ALTER TABLE `Location` ENABLE KEYS */;
+UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -69,4 +102,4 @@ CREATE TABLE `Location` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-08-10 19:01:19
+-- Dump completed on 2017-08-14 22:07:08
