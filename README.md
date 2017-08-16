@@ -1,5 +1,14 @@
 # countries
 
+## Download
+git clone https://github.com/lemenendez/countries
+
+## Prerequisites
+npm
+sudo apt-get install npm
+nodejs
+sudo apt-get install nodejs
+
 ## Install
 1. Create DB
 Create two (2) databases in mysql for example: geo_dev and get_test, the database is used when connection from the browser and the
